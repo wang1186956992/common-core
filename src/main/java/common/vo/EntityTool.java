@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class EntityTool {
 
-    public static List<?> createEntityToVoList(Class<? extends EntityToVo> cs, List list){
+    public List<?> createEntityToVoList(Class<? extends EntityToVo> cs, List list){
         ArrayList<Object> rs = new ArrayList<>();
         for (Object o : list) {
             Object entityToVo = createEntityToVo(cs, o);
@@ -21,7 +21,7 @@ public class EntityTool {
         return rs;
 
     }
-    public static EntityToVo createEntityToVo(Class<? extends EntityToVo> cs,Object ...datas){
+    public EntityToVo createEntityToVo(Class<? extends EntityToVo> cs,Object ...datas){
         try {
             EntityToVo entityToVo = cs.newInstance();
             entityToVo.loadData(datas);
@@ -35,7 +35,7 @@ public class EntityTool {
     }
 
 
-    public static Page<EntityToVo> getPageEntityToVo(Class<? extends EntityToVo> cs, Page<?> page){
+    public Page<EntityToVo> getPageEntityToVo(Class<? extends EntityToVo> cs, Page<?> page){
 
         Page<EntityToVo> entityToVoPage = new Page<>();
         entityToVoPage.setTotal(page.getTotal());
