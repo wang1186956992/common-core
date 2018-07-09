@@ -10,42 +10,43 @@ public class DateTool {
 
     /**
      * 获取年
+     *
      * @param dateTime
      * @return
      */
-    public static Integer getYearFromDate(Long dateTime){
-        Calendar calendar=Calendar.getInstance();
-        Date date=new Date(dateTime);
+    public static Integer getYearFromDate(Long dateTime) {
+        Calendar calendar = Calendar.getInstance();
+        Date date = new Date(dateTime);
         calendar.setTime(date);
-       return  calendar.get(Calendar.YEAR);
+        return calendar.get(Calendar.YEAR);
 
     }
 
     /**
      * 获取月
+     *
      * @param dateTime
      * @return
      */
-    public static Integer getMonthFromDate(Long dateTime){
-        Calendar calendar=Calendar.getInstance();
-        Date date=new Date(dateTime);
+    public static Integer getMonthFromDate(Long dateTime) {
+        Calendar calendar = Calendar.getInstance();
+        Date date = new Date(dateTime);
         calendar.setTime(date);
-        return  calendar.get(Calendar.MONTH)+1;
+        return calendar.get(Calendar.MONTH) + 1;
     }
 
     /**
      * 获取日
+     *
      * @param dateTime
      * @return
      */
-    public static Integer getDayFromDate(Long dateTime){
-        Calendar calendar=Calendar.getInstance();
-        Date date=new Date(dateTime);
+    public static Integer getDayFromDate(Long dateTime) {
+        Calendar calendar = Calendar.getInstance();
+        Date date = new Date(dateTime);
         calendar.setTime(date);
-        return  calendar.get(Calendar.DAY_OF_MONTH);
+        return calendar.get(Calendar.DAY_OF_MONTH);
     }
-
-
 
 
     /**
@@ -59,6 +60,7 @@ public class DateTool {
         return date.getTime() >= DateTool.dayBegin(day).getTime()
                 && date.getTime() <= DateTool.dayEnd(day).getTime();
     }
+
     /**
      * 获取指定时间的那天 00:00:00.000 的时间
      *
@@ -74,6 +76,7 @@ public class DateTool {
         c.set(Calendar.MILLISECOND, 0);
         return c.getTime();
     }
+
     /**
      * 获取指定时间的那天 23:59:59.999 的时间
      *
@@ -89,7 +92,6 @@ public class DateTool {
         c.set(Calendar.MILLISECOND, 999);
         return c.getTime();
     }
-
 
 
 }

@@ -10,11 +10,11 @@ import java.util.List;
 public class Page<T> {
 
     private List<T> list;
-    private int pageCurrent=1;
-    private int pageSize=30;
-    private Long total=0L;
-    private int pageCount=0;
-    private Float avgScore=(float)0.0;
+    private int pageCurrent = 1;
+    private int pageSize = 30;
+    private Long total = 0L;
+    private int pageCount = 0;
+    private Float avgScore = 0.0F;
 
     @JSONField(name = "rows")
     public List<T> getList() {
@@ -24,7 +24,6 @@ public class Page<T> {
     public void setList(List<T> list) {
         this.list = list;
     }
-
 
 
     public int getPageCurrent() {
@@ -50,6 +49,7 @@ public class Page<T> {
     public void setTotal(Long total) {
         this.total = total;
     }
+
     public Float getAvgScore() {
         return avgScore;
     }
@@ -59,15 +59,23 @@ public class Page<T> {
     }
 
     public int getPageCount() {
-        if (pageCount==0&&total>0&&pageSize>0){
-            if (total%pageSize!=0){
-                pageCount= (int) (total/pageSize)+1;
-            }else {
-                pageCount= (int) (total/pageSize);
-            }
+        if (this.total != null && this.pageSize != 0) {
+            if ((long) this.pageSize >= this.total) {
+                this.pageCount = 1;
+                return this.pageCount;
+            } else {
+                if (this.pageCount == 0 && this.total > 0L && this.pageSize > 0) {
+                    this.pageCount = (int) (this.total / (long) this.pageSize);
+                    if (this.total % (long) this.pageSize != 0L) {
+                        ++this.pageCount;
+                    }
+                }
 
+                return this.pageCount;
+            }
+        } else {
+            return 0;
         }
-        return pageCount;
     }
 
     public void setPageCount(int pageCount) {

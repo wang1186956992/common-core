@@ -3,6 +3,8 @@ package common.tool;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.util.regex.Pattern.compile;
+
 /**
  * Created by yf003 on 2016/12/12.
  */
@@ -15,7 +17,7 @@ public class CheckValidateTool {
      * @return
      */
     public static boolean isPhone(String str) {
-        Pattern pattern = Pattern.compile("^1\\d{10}$");
+        Pattern pattern = compile("^1\\d{10}$");
         Matcher phoneCheck = pattern.matcher(str);
         if (!phoneCheck.matches()) {
             return false;
@@ -30,7 +32,7 @@ public class CheckValidateTool {
      * @return
      */
     public static boolean isMail(String str) {
-        Pattern pattern = Pattern.compile("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\\.([a-zA-Z0-9_-])+)+$");
+        Pattern pattern = compile("^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\\.([a-zA-Z0-9_-])+)+$");
         Matcher mailCheck = pattern.matcher(str);
         if (!mailCheck.matches()) {
             return false;
@@ -45,7 +47,7 @@ public class CheckValidateTool {
      * @return
      */
     public static boolean isNumeric(String str) {
-        Pattern pattern = Pattern.compile("[0-9]*");
+        Pattern pattern = compile("[0-9]*");
         Matcher isNum = pattern.matcher(str);
         if (!isNum.matches()) {
             return false;
@@ -59,7 +61,7 @@ public class CheckValidateTool {
      * @return
      */
     public static boolean isIdCard(String str) {
-        Pattern pattern = Pattern.compile("(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)");
+        Pattern pattern = compile("(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)");
         Matcher isNum = pattern.matcher(str);
         if (!isNum.matches()) {
             return false;

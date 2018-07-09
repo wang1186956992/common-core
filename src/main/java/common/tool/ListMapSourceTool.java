@@ -17,19 +17,33 @@ public class ListMapSourceTool<T> {
     public List list = new ArrayList<T>();
 
     public Map getMapData(){
-        return map;
+        return this.map;
     }
+
+
+    /**
+     * 添加key-value值
+     * @param key
+     * @param value
+     * @return
+     */
     public ListMapSourceTool addMapData(String key, Object value){
-        map.put(key,value);
+        this.map.put(key,value);
         return this;
     }
 
 
     public List getListData(){
-        return list;
+        return this.list;
     }
+
+    /**
+     * 添加list对象
+     * @param value
+     * @return
+     */
     public ListMapSourceTool addListData(Object value){
-        list.add(value);
+        this.list.add(value);
         return this;
     }
 
