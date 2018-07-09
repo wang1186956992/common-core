@@ -9,7 +9,7 @@ import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalUnit;
 import java.util.Date;
 
-public class LocalDateTimeUtils {
+public final class LocalDateTimeUtils {
     //获取当前时间的LocalDateTime对象
     //LocalDateTime.now();
 

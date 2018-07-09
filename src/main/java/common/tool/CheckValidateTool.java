@@ -8,7 +8,7 @@ import static java.util.regex.Pattern.compile;
 /**
  * Created by yf003 on 2016/12/12.
  */
-public class CheckValidateTool {
+public final class CheckValidateTool {
 
     /**
      * 验证手机号

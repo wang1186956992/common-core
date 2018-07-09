@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 时间间隔计算
  */
-public class FriendlyTime {
+public final class FriendlyTime {
 
 
     private static final long ONE_MINUTE = 60000L;

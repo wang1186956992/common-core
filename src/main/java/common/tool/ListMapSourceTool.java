@@ -8,9 +8,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2016/10/28.
+ *
+ * @author Administrator
+ * @date 2016/10/28
  */
-public class ListMapSourceTool<T> {
+public final class ListMapSourceTool<T> {
 
     public Map map = new HashMap<String,T>();
 

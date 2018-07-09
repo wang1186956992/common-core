@@ -9,7 +9,7 @@ import static common.tool.LocalDateTimeUtils.getDayEnd;
 import static common.tool.LocalDateTimeUtils.getDayStart;
 
 
-public class LocaDateTimeUtilsTest {
+public final class LocaDateTimeUtilsTest {
 
     @Test
     public void format_test() {

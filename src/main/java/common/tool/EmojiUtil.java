@@ -7,7 +7,7 @@ import com.github.binarywang.java.emoji.EmojiConverter;
  * @author Administrator
  *
  */
-public class EmojiUtil {
+public final class EmojiUtil {
     private static EmojiConverter emojiConverter = EmojiConverter.getInstance();
 
     /**

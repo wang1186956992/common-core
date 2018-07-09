@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * Created by Administrator on 2017/1/2.
  */
-public class DateTool {
+public final class DateTool {
 
     /**
      * 获取年

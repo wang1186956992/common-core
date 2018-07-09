@@ -5,9 +5,11 @@ import org.apache.commons.codec.digest.DigestUtils;
 import java.util.UUID;
 
 /**
- * Created by CF on 2016/5/25.
+ *
+ * @author CF
+ * @date 2016/5/25
  */
-public class PasswordTool {
+public final class PasswordTool {
 
     /**
      * 随机生成密码盐

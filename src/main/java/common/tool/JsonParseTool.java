@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *json 转换类库
  */
-public class JsonParseTool {
+public final class JsonParseTool {
     /**
      * 把json转换成数组
      * @param json  json字符串

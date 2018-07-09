@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/7/30.
  */
-public class IdTwoStringTool {
+public final class IdTwoStringTool {
 
 
     /**

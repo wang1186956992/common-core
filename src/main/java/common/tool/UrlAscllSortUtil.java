@@ -6,9 +6,11 @@ import java.net.URLEncoder;
 import java.util.*;
 
 /**
- * Created by yf003 on 2017/11/13.
+ *
+ * @author yf003
+ * @date 2017/11/13
  */
-public class UrlAscllSortUtil {
+public final class UrlAscllSortUtil {
 
 
     private static final String ENCODE = "UTF-8";
